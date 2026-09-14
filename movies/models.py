@@ -16,5 +16,6 @@ class Review(models.Model):
         on_delete=models.CASCADE)
     user = models.ForeignKey(User,
         on_delete=models.CASCADE)
+    flagged = models.BooleanField(default=False)
     def __str__(self):
         return str(self.id) + ' - ' + self.movie.name
